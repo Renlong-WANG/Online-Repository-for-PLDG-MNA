@@ -1,0 +1,53 @@
+node_type,node_id,label_en
+Process (P),P1,Import customs declaration
+,P2,Import inspection
+,P3,Vessel arrival
+,P4,Vessel waiting for berth assignment
+,P5,Vessels entering the port
+,P6,Container liner
+,P7,Bill audit
+,P8,Loading and unloading operation
+,P9,Cargo assembly
+,P10,Inland transportation cargo insurance handling
+,P11,Inland transportation consignment
+,P12,In-port transportation
+,P13,Stockpile storage in yard
+,P14,Customs supervision and release
+,P15,Vessel departure
+Data (D),D1,Vessel information
+,D2,Commodity Information
+,D3,Bancassurance information
+,D4,Handling machinery information
+,D5,Container train information
+,D6,Yard information
+,D7,Information on means of transport in the port
+,D8,Railway port station information
+,D9,Regulatory release information
+,D10,Invoice information
+,D11,Bank credit certificate
+,D12,Customs declaration documents
+,D13,Multimodal bill of lading
+,D14,Sort information
+,D15,Principal-agent contract
+,D16,Railway transport plan
+Agent (A),A1,Vessel commander
+,A2,Port coordinator
+,A3,Tally clerk
+,A4,Transportation driver
+,A5,Stevedore
+,A6,Handling machinery driver
+,A7,Port information technology officer
+,A8,Customs supervisors
+,A9,Consignor
+,A10,Consignee
+,A11,Insurance staff
+,A12,Tax staff
+,A13,Railway freight forwarder
+Organization (O),O1,Vessel company
+,O2,Consignee Company
+,O3,Railroad bureau
+,O4,Port operator
+,O5,Vessel company
+,O6,Taxation department
+,O7,Insurance company
+,O8,Customs

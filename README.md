@@ -1,40 +1,28 @@
-# PLDG-MNA Input Data
+# Data dictionary
 
-Input data for the Port R scenario used in:
+## Node table
 
-> *Assessing and Optimizing Operational Data Governance Capacity in Port
-> Logistics: A Collaboration-Based Meta-Network Approach*
+`nodes.csv` uses four columns:
 
-This repository contains only the input node dictionary and the seven binary
-subnetwork matrices. Port R is an anonymized, reference-informed illustrative
-scenario abstracted from a real-port workflow; it is not an observed empirical
-network.
+| Column | Meaning |
+|---|---|
+| `node_type` | `agent`, `organization`, `data`, or `process` |
+| `node_id` | Stable identifier used in all matrices |
+| `label_en` | English node label used in the manuscript
+ 
 
-## Contents
+## Subnetwork tables
 
-```text
-data/
-├── nodes.csv
-└── subnetworks/
-    ├── AA.csv
-    ├── AD.csv
-    ├── AO.csv
-    ├── AP.csv
-    ├── DO.csv
-    ├── DP.csv
-    └── PP.csv
-```
+| File | Rows × columns | Relation encoded by `1` |
+|---|---:|---|
+| `AA.csv` | 13 agents × 13 agents | Operational collaboration |
+| `AD.csv` | 13 agents × 16 data items | Actual data access |
+| `AO.csv` | 13 agents × 8 organizations | Institutional affiliation |
+| `AP.csv` | 13 agents × 15 processes | Process responsibility |
+| `DO.csv` | 16 data items × 8 organizations | Data ownership or maintenance responsibility |
+| `DP.csv` | 16 data items × 15 processes | Data required by a process |
+| `PP.csv` | 15 processes × 15 processes | Immediate process precedence |
 
-- `nodes.csv` lists 13 agents, 8 organizations, 16 data items, and 15
-  processes.
-- Each subnetwork CSV has node IDs in the first row and first column.
-- Matrix entries are binary: `1` means that the relation was identified in the
-  scenario; `0` means that it was not identified.
-- `AA` is symmetric. `PP` is directed from an immediately preceding process to
-  its successor.
-- The diagonal ones in `AA` and `PP` are ORA identity markers. They are retained
-  to preserve the original input and should be excluded from substantive
-  interpretation.
-
-See [data/README.md](data/README.md) for matrix meanings and dimensions.
-
+All files are UTF-8 CSV with comma delimiters. Zeros represent relations not
+identified within the scenario evidence; they should not automatically be
+interpreted as proof that a relation cannot exist outside the scenario boundary.
